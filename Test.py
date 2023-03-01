@@ -34,7 +34,7 @@ def seek_time():
 	if request.method == "PUT":
 		print("Start processing put request for seeking time");
 		time_stamp = request.get_data();
-		decoded_time_stamp = struct.unpack('<d', time_stamp)[0];
+		decoded_time_stamp = struct.unpack('if', time_stamp)[1];
 		print(time_stamp);
 		print(decoded_time_stamp);
 		return time_stamp;
